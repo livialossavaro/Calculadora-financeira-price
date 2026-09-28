@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 5px;
+    position: fixed;
+    width: 100%;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-logo img {
+    width: 50px;
+    height: auto;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+strong {
+    color: #2563eb;
+}
+
+.nav-logo p {
+    font-size: 12px;
+    font-weight: 600;
+    color: #2563eb;
+    background-color: #eff6ff;
+    border: #2563eb solid 1px;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    margin-right: 30px;
+}
+
+.nav-links a {
+    color: #797c80;
+    font-weight: 600;
+    text-decoration: none;
+}
