@@ -10,6 +10,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
+    border-bottom: #dadee2 solid 2px;
     padding: 5px;
     position: fixed;
     width: 100%;
@@ -52,4 +53,41 @@ strong {
     color: #797c80;
     font-weight: 600;
     text-decoration: none;
+}
+
+.title {
+    padding-top: 100px;
+}
+
+.calculator {
+    background-color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.title p {
+    font-size: 12px;
+    font-weight: 600;
+    color: #2563eb;
+    background-color: #eff6ff;
+    border: #2563eb solid 1px;
+    padding: 5px;
+    margin-top: 20px;
+    margin-left: 130px;
+    border-radius: 15px;
+    width: 265px;
+}
+
+.title h1 {
+    font-size: 40px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.title h3 {
+    font-weight: 500;
+    font-size: 16px;
+    color: #797c80;
 }
