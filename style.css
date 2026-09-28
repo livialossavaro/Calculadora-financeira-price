@@ -4,7 +4,14 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
+
+body {
+    padding-top: 80px;
+    background-color: #f8fafc;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -13,6 +20,8 @@ nav {
     border-bottom: #dadee2 solid 2px;
     padding: 5px;
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
 }
 
@@ -55,33 +64,34 @@ strong {
     text-decoration: none;
 }
 
-.title {
-    padding-top: 100px;
-}
-
 .calculator {
     background-color: #f8fafc;
     display: flex;
     justify-content: center;
     text-align: center;
-    padding: 0 20px;
+    padding: 20px 20px 20px 20px;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
 }
 
 .title p {
+    display: inline-block;
     font-size: 12px;
     font-weight: 600;
     color: #2563eb;
     background-color: #eff6ff;
     border: #2563eb solid 1px;
-    padding: 5px;
-    margin-top: 20px;
-    margin-left: 130px;
-    border-radius: 15px;
-    width: 265px;
+    padding: 6px 14px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    border-radius: 20px;
 }
 
 .title h1 {
     font-size: 40px;
+    font-weight: 800;
     margin-top: 15px;
     margin-bottom: 15px;
 }
