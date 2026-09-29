@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="PT-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="icon" type="image/png" href="./images/Calculator_logo.png">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <nav>
         <div class="nav-logo">
@@ -27,7 +29,81 @@
         <div class="title">
             <p>● Cálculo oficial Price e SAC em tempo real</p>
             <h1>Simule seu financiamento</h1>
-            <h3>Descubra quanto você pagaria por mês de forma clara, comparando as <br>parcelas fixas da Price e o decrescimento do SAC.</h3>
+            <h3>Descubra quanto você pagaria por mês de forma clara, comparando as <br>parcelas fixas da Price.</h3>
+        </div>
+
+        <div class="container">
+            <div class="inputs">
+                <div class="input-title">
+                    <img src="./images/file.png" alt="ícone">
+                    <h3>Dados do financiamento</h3>
+                </div>
+                <div class="p-title">
+                    <p>Preencha os valores do imóvel, entrada e condições desejadas.</p>
+                </div>
+            
+                <label for="valor">Valor do imóvel(R$)</label>
+                <input type="text" class="valor" id="valor" required>
+
+                <label for="entrada">Valor de entrada(R$)</label>
+                <input type="text" name="entrada" id="entrada" required>
+            
+            <div class="taxas-lable">
+                <label for="prazo">Prazo (em meses)</label>
+                <label for="valor">Taxa de juros mensal (%)</label>
+
+            </div>
+            <div class="taxas">
+                <input type="text" name="prazo" id="prazo" required>
+                <input type="text" name="juros" id="juros" required>
+            </div>
+
+            <button>Simular financiamento</button>
+
+            </div>
+            <div class="results">
+                <div class="result-title">
+                    <h3>🔵Resultado</h3>
+                    <p>Tabela Price</p>
+                </div>
+                <div class="parcela">
+                    <div class="parcela-title">
+                        <h3>Parcela estimada(FIXA)</h3>
+                        <p>Amortização: R$ 666,67</p>
+                    </div>
+                    <h2>R$ 2.035,58</h2>
+                    <div class="ultima-parcela">
+                        <p>Última parcela estimada: </p>
+                        <p>R$ 672,00</p>
+                    </div>
+                    <div class="alerta">
+                        <img src="./images/alert.png" alt="ícone">
+                        <p>Mesmo valor em todas as 360 parcelas.</p>
+                    </div>
+                </div>
+                <div class="result-info">
+                    <div class="dados">
+                        <h3>Valor financiado</h3>
+                        <p>R$ 240.000,00</p>
+                    </div>
+                    <div class="dados">
+                        <h3>Taxa de juros mensal</h3>
+                        <p>0,80% a.m.</p>
+                    </div>
+                    <div class="dados">
+                        <h3>Taxa de juros anua</h3>
+                        <p>10,83% a.a.</p>
+                    </div>
+                    <div class="dados">
+                        <h3>Total em juros</h3>
+                        <p>R$ 492.810,21</p>
+                    </div>
+                    <div class="dados">
+                        <h3>Total em juros</h3>
+                        <p>R$ 732.810,21</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
