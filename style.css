@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 * {
@@ -111,7 +110,7 @@ nav {
     display: flex;
     flex-direction: row;
     gap: 40px;
-    align-items: self-start;
+    align-items: stretch;
 }
 
 .inputs {
@@ -189,6 +188,44 @@ input {
     border-radius: 10px;
     border: none;
     cursor: pointer;
+}
+
+.help {
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid #FFFFFF33;
+}
+
+.help h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.passo {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.passo strong {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    min-width: 25px;
+    height: 25px;
+    background-color: #2563eb;
+    color: #fff;
+    padding: 3px;
+    border-radius: 50%;
+}
+
+.passo p {
+    display: flex;
+    align-items: center;
+    color: #434547;
+    font-size: 15px;
 }
 
 .results {
@@ -287,7 +324,7 @@ input {
 }
 
 .dados h3 {
-    color: #787f8b;
+    color: #797c80;
     font-size: 15px;
 }
 
@@ -315,3 +352,66 @@ input {
     margin-top: 5px;
     font-size: 14px;
 }
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+    background-color: #4567aa;
+    padding: 40px;
+    border-top: #26375a solid 2px;
+}
+
+.about-label {
+    font-size: 15px;
+    background-color: #504f4f81;
+    border: #26375a solid 1px;
+    padding: 10px;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.about-text {
+    width: 50%;
+}
+
+
+.about-text h2 {
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.about-text p {
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+.about-card {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-card h2 {
+    margin: 0 0 18px 0;
+    font-size: 28px;
+}
+
+.about-elements {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about-elements p {
+    margin: 0;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background-color: #385188;
+    border:#24304b solid 1px;
+    font-size: 17px;
+}
+
