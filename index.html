@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="PT-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Descubra, através da nossa calculadora, quanto irá pagar em seu financiamento! É fácil e rápido!">
-    <meta name="keywords" content="Financiamento imobiliário, calculadora, financeiro, tabelas Sac e price">
+    <meta name="keywords" content="Financiamento imobiliário, calculadora, financeiro, tabela price">
+    
     <title>Calculadora de financiamento</title>
+    
     <link rel="icon" type="image/png" href="./images/Calculator_logo.png">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -18,6 +20,7 @@
             <h2>Simula<strong>Fácil</strong></h2>
             <p>Simulador imobiliário</p>
         </div>
+
         <div class="nav-links">
             <a href="#calculator">Simulador</a>
             <a href="#table">Tabela</a>
@@ -25,88 +28,109 @@
         </div>
     </nav>
 
-    <div class="calculator">
-        <div class="title">
-            <p>● Cálculo oficial Price e SAC em tempo real</p>
+    <main class="calculator">
+        <section class="title">
+            <p>● Cálculo oficial Price em tempo real</p>
             <h1>Simule seu financiamento</h1>
-            <h3>Descubra quanto você pagaria por mês de forma clara, comparando as <br>parcelas fixas da Price.</h3>
-        </div>
+            <h3>Descubra quanto você pagaria por mês de forma clara <br> com as parcelas fixas do sistema Price.</h3>
+        </section>
 
-        <div class="container">
+        <section class="container">
             <div class="inputs">
                 <div class="input-title">
                     <img src="./images/file.png" alt="ícone">
                     <h3>Dados do financiamento</h3> 
                 </div>
+
                 <div class="p-title">   
                     <p>Preencha os valores do imóvel, entrada e condições desejadas.</p>
                 </div>
             
+                <form id="financing-form">
+
                 <label for="valor">Valor do imóvel(R$)</label>
-                <input type="text" class="valor" id="valor" required>
+                <input type="text" name="valor" id="valor" placeholder="R$ 0,00" required>
 
                 <label for="entrada">Valor de entrada(R$)</label>
-                <input type="text" name="entrada" id="entrada" required>
+                <input type="text" name="entrada" id="entrada" placeholder="R$ 0,00" required>
             
-            <div class="taxas-lable">
+            <div class="taxas-label">
                 <label for="prazo">Prazo (em meses)</label>
-                <label for="valor">Taxa de juros mensal (%)</label>
+                <label for="juros">Taxa de juros mensal (%)</label>
+            </div>
+
+            <div class="taxas">
+                <input type="number" name="prazo" id="prazo" placeholder="Ex.: 360" min="1" required>
+                <input type="number" name="juros" id="juros" placeholder="Ex.: 0,80" min="0" step="0.01" required>
+            </div>
+            
+            <button type="submit">Simular financiamento</button>
+
+            </form>
 
             </div>
-            <div class="taxas">
-                <input type="text" name="prazo" id="prazo" required>
-                <input type="text" name="juros" id="juros" required>
-            </div>
-        
-            <button>Simular financiamento</button>
-            </div>
-            <div class="options">
-                
-            </div>
+
             <div class="results">
                 <div class="result-title">
                     <h3>🔵 Resultado</h3>
                     <p>TABELA PRICE</p>
                 </div>
+
                 <div class="parcela">
                     <div class="parcela-title">
                         <h3>PARCELA ESTIMADA(FIXA)</h3>
-                        <p>Amortização: R$ 666,67</p>
+                        <p>Amortização inicial: <span id="amortizacao-inicial">R$ 0,00</span></p>
                     </div>
-                    <h2>R$ 2.035,58</h2>
+
+                    <h2 id="valor-parcela">R$ 2.035,58</h2>
+                    
                     <div class="alerta">
                         <img src="./images/ponto-de-exclamacao.png" alt="ícone">
-                        <p>Mesmo valor em todas as 360 parcelas.</p>
+                        <p>Mesmo valor em todas as <span id="quantidade-parcelas">0</span> parcelas.</p>
                     </div>
                 </div>
+
                 <div class="result-info">
+
                     <div class="dados">
                         <h3>Valor financiado</h3>
-                        <p>R$ 240.000,00</p>
+                        <p id="valor-financiado">R$ 240.000,00</p>
                     </div>
+
                     <div class="dados">
                         <h3>Taxa de juros mensal</h3>
-                        <p>0,80% a.m.</p>
+                        <p id="taxa-mensal">0,80% a.m.</p>
                     </div>
+
                     <div class="dados">
                         <h3>Taxa de juros anual</h3>
-                        <p>10,83% a.a.</p>
+                        <p id="taxa-anual">10,83% a.a.</p>
                     </div>
+
                     <div class="dados">
                         <h3>Total em juros</h3>
-                        <p>R$ 492.810,21</p>
+                        <p id="total-juros">R$ 492.810,21</p>
                     </div>
+
                     <div class="dados">
                         <h3>Custo total (imóvel+juros)</h3>
-                        <p>R$ 732.810,21</p>
+                        <p id="custo total">R$ 732.810,21</p>
                     </div>
+
                     <div class="tip">
                         <h3>Dica do simulador:</h3>
-                        <p>No sistema Price as parcelas começam mais baixas que no SAC, facilitando a aprovação do crédito, porém o total final pago em juros costuma ser superior.</p>
+                        <p>
+                            No sistema Price, o valor da parcela permanece fixo durante
+                            todo o financiamento. No início, uma parte maior da parcela
+                            corresponde aos juros; com o passar do tempo, a amortização
+                            aumenta.
+                        </p>
                     </div>
                 </div>  
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
