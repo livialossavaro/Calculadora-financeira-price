@@ -420,6 +420,17 @@ input {
     padding: 30px 20px;
 }
 
+.table-title h2 {
+    font-size: 30px;
+    margin-bottom: 5px;
+    color: #385188;
+}
+
+.table-title p {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
 .table-container {
     width: 100%;
     margin-bottom: 30px;
