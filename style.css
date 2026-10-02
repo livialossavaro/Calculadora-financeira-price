@@ -434,6 +434,7 @@ input {
 .table-container {
     width: 100%;
     margin-bottom: 30px;
+    overflow-x: auto;
 }
 
 #amortization-table {
@@ -455,4 +456,157 @@ input {
     text-align: right;
     font-size: 13px;
     font-family: 'JetBrains Mono';
+}
+
+@media (max-width: 768px) {
+
+    /* NAV */
+
+    nav {
+        padding: 8px;
+    }
+
+    .nav-logo {
+        gap: 8px;
+    }
+
+    .nav-logo img {
+        width: 40px;
+        margin-left: 5px;
+    }
+
+    .nav-logo p {
+        display: none;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        margin-right: 10px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+
+    /* TÍTULO */
+
+    .title h1 {
+        font-size: 30px;
+    }
+
+    .title h3 {
+        font-size: 14px;
+    }
+
+
+    /* CALCULADORA */
+
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .inputs,
+    .results {
+        width: 100%;
+    }
+
+    .inputs,
+    .results {
+        padding: 25px;
+    }
+
+
+    /* SOBRE */
+
+    .about {
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px 25px;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .about-card {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    /* NAV */
+
+    .nav-logo h2 {
+        font-size: 18px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+
+    /* TÍTULO */
+
+    .title h1 {
+        font-size: 26px;
+    }
+
+
+    /* INPUTS */
+
+    .inputs,
+    .results {
+        padding: 20px;
+    }
+
+    .taxas-label,
+    .taxas {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+
+    /* PARCELA */
+
+    .parcela-title {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .parcela-title p {
+        width: fit-content;
+    }
+
+    .parcela h2 {
+        font-size: 28px;
+    }
+
+
+    /* DADOS */
+
+    .dados {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+
+    /* TABELA */
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    #amortization-table {
+        min-width: 800px;
+    }
+
 }
