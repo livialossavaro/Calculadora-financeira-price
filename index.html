@@ -1,214 +1,218 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+    <!DOCTYPE html>
+    <html lang="pt-BR">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descubra, através da nossa calculadora, quanto irá pagar em seu financiamento! É fácil e rápido!">
-    <meta name="keywords" content="Financiamento imobiliário, calculadora, financeiro, tabela price">
-    
-    <title>Calculadora de financiamento</title>
-    
-    <link rel="icon" type="image/png" href="./images/Calculator_logo.png">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Descubra, através da nossa calculadora, quanto irá pagar em seu financiamento! É fácil e rápido!">
+        <meta name="keywords" content="Financiamento imobiliário, calculadora, financeiro, tabela price">
+        
+        <title>Calculadora de financiamento</title>
+        
+        <link rel="icon" type="image/png" href="./images/Calculator_logo.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-<body>
-    <nav>
-        <div class="nav-logo">
-            <img src="images/Calculator_logo.png" alt="logo">
-            <h2>Simula<strong>Fácil</strong></h2>
-            <p>Simulador imobiliário</p>
-        </div>
-
-        <div class="nav-links">
-            <a href="#calculator">Simulador</a>
-            <a href="#table">Tabela</a>
-            <a href="#about">Sobre</a>
-        </div>
-    </nav>
-
-    <main id="calculator" class="calculator">
-        <section class="title">
-            <p>● Cálculo oficial Price em tempo real</p>
-            <h1>Simule seu financiamento</h1>
-            <h3>Descubra quanto você pagaria por mês de forma clara com as parcelas fixas do sistema Price.</h3>
-        </section>
-
-        <section class="container">
-            <div class="inputs">
-                <div class="input-title">
-                    <img src="./images/file.png" alt="ícone">
-                    <h3>Dados do financiamento</h3> 
-                </div>
-
-                <div class="p-title">   
-                    <p>Preencha os valores do imóvel, entrada e condições desejadas.</p>
-                </div>
-            
-                <form id="financing-form">
-
-                <label for="valor">Valor do imóvel(R$)</label>
-                <input type="text" name="valor" id="valor" placeholder="R$ 0,00" required>
-
-                <label for="entrada">Valor de entrada(R$)</label>
-                <input type="text" name="entrada" id="entrada" placeholder="R$ 0,00" required>
-            
-            <div class="taxas-label">
-                <label for="prazo">Prazo (em meses)</label>
-                <label for="juros">Taxa de juros mensal (%)</label>
+    <body>
+        <nav>
+            <div class="nav-logo">
+                <img src="images/Calculator_logo.png" alt="logo">
+                <h2>Simula<strong>Fácil</strong></h2>
+                <p>Simulador imobiliário</p>
             </div>
 
-            <div class="taxas">
-                <input type="number" name="prazo" id="prazo" placeholder="Ex.: 360" min="1" required>
-                <input type="number" name="juros" id="juros" placeholder="Ex.: 0,80" min="0" step="0.01" required>
+            <div class="nav-links">
+                <a href="#calculator">Simulador</a>
+                <a href="#table">Tabela</a>
+                <a href="#about">Sobre</a>
             </div>
-            
-            <button type="submit">Simular financiamento</button>
+        </nav>
 
-            <div class="help">
-                <h3>✔ Como funciona?</h3>
+        <main id="calculator" class="calculator">
+            <section class="title">
+                <p>● Cálculo oficial Price em tempo real</p>
+                <h1>Simule seu financiamento</h1>
+                <h3>Descubra quanto você pagaria por mês de forma clara com as parcelas fixas do sistema Price.</h3>
+            </section>
 
-                <div class="passo">
-                    <strong>1</strong>
-                    <p>Informe o valor do imóvel e o valor da entrada.</p>
-                </div>
-
-                <div class="passo">
-                    <strong>2</strong>
-                    <p>Defina o prazo e a taxa de juros do financiamento.</p>
-                </div>
-
-            <div class="passo">
-                <strong>3</strong>
-                <p>Clique em "Simular" para visualizar os resultados.</p>
-            </div>
-            </div>
-
-            </form>
-
-            </div>
-
-            <div class="results">
-                <div class="result-title">
-                    <h3>🔵 Resultado</h3>
-                    <p>TABELA PRICE</p>
-                </div>
-
-                <div class="parcela">
-                    <div class="parcela-title">
-                        <h3>PARCELA ESTIMADA(FIXA)</h3>
-                        <p>Amortização inicial: <span id="amortizacao-inicial">R$ 0,00</span></p>
+            <section class="container">
+                <div class="inputs">
+                    <div class="input-title">
+                        <img src="./images/file.png" alt="ícone">
+                        <h3>Dados do financiamento</h3> 
                     </div>
 
-                    <h2 id="valor-parcela">R$ 0,00</h2>
+                    <div class="p-title">   
+                        <p>Preencha os valores do imóvel, entrada e condições desejadas.</p>
+                    </div>
+                
+                    <form id="financing-form">
+
+                    <label for="valor">Valor do imóvel(R$)</label>
+                    <input type="text" name="valor" id="valor" placeholder="R$ 0,00" required>
+
+                    <label for="entrada">Valor de entrada(R$)</label>
+                    <input type="text" name="entrada" id="entrada" placeholder="R$ 0,00" required>
+                
+                <div class="taxas">
+                    <div class="taxas-label">
+                        <label for="prazo">Prazo (em meses)</label>
+                    </div>
+
+                    <input type="number" name="prazo" id="prazo" placeholder="Ex.: 360" min="1" required>
                     
-                    <div class="alerta">
-                        <img src="./images/ponto-de-exclamacao.png" alt="ícone">
-                        <p>Mesmo valor em todas as <span id="quantidade-parcelas">0</span> parcelas.</p>
+                    <div class="taxas-label">
+                        <label for="juros">Taxa de juros mensal (%)</label>
                     </div>
+                    
+                    <input type="number" name="juros" id="juros" placeholder="Ex.: 0,80" min="0" step="0.01" required>
+                </div>
+                
+                <button type="submit">Simular financiamento</button>
+
+                <div class="help">
+                    <h3>✔ Como funciona?</h3>
+
+                    <div class="passo">
+                        <strong>1</strong>
+                        <p>Informe o valor do imóvel e o valor da entrada.</p>
+                    </div>
+
+                    <div class="passo">
+                        <strong>2</strong>
+                        <p>Defina o prazo e a taxa de juros do financiamento.</p>
+                    </div>
+
+                <div class="passo">
+                    <strong>3</strong>
+                    <p>Clique em "Simular" para visualizar os resultados.</p>
+                </div>
                 </div>
 
-                <div class="result-info">
+                </form>
 
-                    <div class="dados">
-                        <h3>Valor financiado</h3>
-                        <p id="valor-financiado">R$ 0,00</p>
+                </div>
+
+                <div class="results">
+                    <div class="result-title">
+                        <h3>🔵 Resultado</h3>
+                        <p>TABELA PRICE</p>
                     </div>
 
-                    <div class="dados">
-                        <h3>Taxa de juros mensal</h3>
-                        <p id="taxa-mensal">0,0% a.m.</p>
+                    <div class="parcela">
+                        <div class="parcela-title">
+                            <h3>PARCELA ESTIMADA(FIXA)</h3>
+                            <p>Amortização inicial: <span id="amortizacao-inicial">R$ 0,00</span></p>
+                        </div>
+
+                        <h2 id="valor-parcela">R$ 0,00</h2>
+                        
+                        <div class="alerta">
+                            <img src="./images/ponto-de-exclamacao.png" alt="ícone">
+                            <p>Mesmo valor em todas as <span id="quantidade-parcelas">0</span> parcelas.</p>
+                        </div>
                     </div>
 
-                    <div class="dados">
-                        <h3>Taxa de juros anual</h3>
-                        <p id="taxa-anual">0,0% a.a.</p>
-                    </div>
+                    <div class="result-info">
 
-                    <div class="dados">
-                        <h3>Total em juros</h3>
-                        <p id="total-juros">R$ 0,00</p>
-                    </div>
+                        <div class="dados">
+                            <h3>Valor financiado</h3>
+                            <p id="valor-financiado">R$ 0,00</p>
+                        </div>
 
-                    <div class="dados">
-                        <h3>Custo total (imóvel+juros)</h3>
-                        <p id="custo-total">R$ 0,00</p>
-                    </div>
+                        <div class="dados">
+                            <h3>Taxa de juros mensal</h3>
+                            <p id="taxa-mensal">0,0% a.m.</p>
+                        </div>
 
-                    <div class="tip">
-                        <h3>Dica do simulador:</h3>
-                        <p>
-                            No sistema Price, o valor da parcela permanece fixo durante
-                            todo o financiamento. No início, uma parte maior da parcela
-                            corresponde aos juros; com o passar do tempo, a amortização
-                            aumenta.
-                        </p>
-                    </div>
-                </div>  
-            </div>
-        </section>
-    </main>
+                        <div class="dados">
+                            <h3>Taxa de juros anual</h3>
+                            <p id="taxa-anual">0,0% a.a.</p>
+                        </div>
 
-    <section class="table-section" id="table">
+                        <div class="dados">
+                            <h3>Total em juros</h3>
+                            <p id="total-juros">R$ 0,00</p>
+                        </div>
 
-    <div class="table-title">
-        <h2>Tabela de amortização</h2>
-        <p>Veja como o saldo devedor, os juros e a amortização evoluem ao longo do financiamento.</p>
-    </div>
+                        <div class="dados">
+                            <h3>Custo total (imóvel+juros)</h3>
+                            <p id="custo-total">R$ 0,00</p>
+                        </div>
 
-    <div class="table-container">
+                        <div class="tip">
+                            <h3>Dica do simulador:</h3>
+                            <p>
+                                No sistema Price, o valor da parcela permanece fixo durante
+                                todo o financiamento. No início, uma parte maior da parcela
+                                corresponde aos juros; com o passar do tempo, a amortização
+                                aumenta.
+                            </p>
+                        </div>
+                    </div>  
+                </div>
+            </section>
+        </main>
 
-        <table id="amortization-table">
+        <section class="table-section" id="table">
 
-            <thead>
-                <tr>
-                    <th>Parcela</th>
-                    <th>Saldo inicial</th>
-                    <th>Juros</th>
-                    <th>Amortização</th>
-                    <th>Parcela</th>
-                    <th>Saldo final</th>
-                </tr>
-            </thead>
-
-            <tbody id="table-body">
-                <tr>
-                    <td>1</td>
-                    <td>R$ 0,00</td>
-                    <td>R$ 0,00</td>
-                    <td>R$ 0,00</td>
-                    <td>R$ 0,00</td>
-                    <td>R$ 0,00</td>
-                </tr>
-            </tbody>
-
-        </table>
-
-    </div>
-
-</section>
-
-    <section id="about" class="about">
-        <div class="about-text">
-            <span class="about-label">SOBRE A TABELA PRICE</span>
-            <h2>O que é a tabela price?</h2>
-            <p>A Tabela Price é um método de cálculo de empréstimos e financiamentos caracterizado pelo pagamento de prestações mensais e fixas ao longo de todo o contrato.</p>
-            <p>Facilita o planejamento financeiro de curto e médio prazo, pois o mutuário sabe exatamente quanto vai pagar todos os meses.</p>
+        <div class="table-title">
+            <h2>Tabela de amortização</h2>
+            <p>Veja como o saldo devedor, os juros e a amortização evoluem ao longo do financiamento.</p>
         </div>
 
-        <div class="about-card">
-            <h2>Por que utilizar?</h2>
-            <div class="about-elements">
-            <p>● Simples de usar</p>
-            <p>● 100% seguro</p>
-            <p>● Completo</p>
-            <p>● Totalmente gratuito</p>
-        </div>
+        <div class="table-container">
+
+            <table id="amortization-table">
+
+                <thead>
+                    <tr>
+                        <th>Parcela</th>
+                        <th>Saldo inicial</th>
+                        <th>Juros</th>
+                        <th>Amortização</th>
+                        <th>Parcela</th>
+                        <th>Saldo final</th>
+                    </tr>
+                </thead>
+
+                <tbody id="table-body">
+                    <tr>
+                        <td>1</td>
+                        <td>R$ 0,00</td>
+                        <td>R$ 0,00</td>
+                        <td>R$ 0,00</td>
+                        <td>R$ 0,00</td>
+                        <td>R$ 0,00</td>
+                    </tr>
+                </tbody>
+
+            </table>
 
         </div>
+
     </section>
 
-    <script src="script.js"></script>
-</body>
-</html>
+        <section id="about" class="about">
+            <div class="about-text">
+                <span class="about-label">SOBRE A TABELA PRICE</span>
+                <h2>O que é a tabela price?</h2>
+                <p>A Tabela Price é um método de cálculo de empréstimos e financiamentos caracterizado pelo pagamento de prestações mensais e fixas ao longo de todo o contrato.</p>
+                <p>Facilita o planejamento financeiro de curto e médio prazo, pois o mutuário sabe exatamente quanto vai pagar todos os meses.</p>
+            </div>
+
+            <div class="about-card">
+                <h2>Por que utilizar?</h2>
+                <div class="about-elements">
+                <p>● Simples de usar</p>
+                <p>● 100% seguro</p>
+                <p>● Completo</p>
+                <p>● Totalmente gratuito</p>
+            </div>
+
+            </div>
+        </section>
+
+        <script src="script.js"></script>
+    </body>
+    </html>
