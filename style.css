@@ -160,16 +160,18 @@
     .taxas {
         display: flex;
         flex-direction: row;
-        gap: 20px;
+        gap: 14px;
         margin-top: 15px;
     }
 
     .taxas-label label {
-        font-size: 15px;
+        font-size: 13px;
+        font-weight: 600;
     }
 
     .taxas input {
-        width: 160px;
+        padding-left: 0;
+        width: 150px;
     }
 
     .p-title {

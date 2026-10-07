@@ -35,7 +35,6 @@ function formatarMoeda(input) {
     });
 }
 
-
 function converterParaNumero(valor) {
 
     return Number(
@@ -47,7 +46,6 @@ function converterParaNumero(valor) {
     );
 
 }
-
 
 valor.addEventListener("input", function() {
     formatarMoeda(valor);
@@ -68,6 +66,11 @@ formulario.addEventListener("submit", function(event) {
     const numeroParcelas = Number(prazo.value);
     const taxaJuros = Number(juros.value);
 
+    if (taxaJuros <= 0) {
+    alert("A taxa de juros deve ser maior que 0%.");
+    return;
+}
+
     const valorFinanciado = valorImovel - valorEntrada;
 
     const taxaMensal = taxaJuros / 100;
@@ -86,13 +89,10 @@ formulario.addEventListener("submit", function(event) {
 
     const taxaAnual = (Math.pow(1 + taxaMensal, 12) - 1) * 100;
 
-    // Limpando a tabela anterior
 tabelaBody.innerHTML = "";
 
-// Saldo devedor inicial
 let saldoDevedor = valorFinanciado;
 
-// Criando cada parcela
 for (let i = 1; i <= numeroParcelas; i++) {
 
     const jurosParcela = saldoDevedor * taxaMensal;
